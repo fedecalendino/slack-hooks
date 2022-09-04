@@ -1,12 +1,14 @@
+from typing import List
+
 from .block import Block
 from .text import Text
 
 
 class Context(Block):
-    def __init__(self, elements: list[Text] = None):
+    def __init__(self, elements: List[Text] = None):
         super().__init__(type="context")
 
-        self.elements: list[Text] = elements or []
+        self.elements: List[Text] = elements or []
 
     def serialize(self) -> dict:
         return super().serialize() | {

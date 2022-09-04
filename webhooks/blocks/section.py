@@ -1,3 +1,5 @@
+from typing import List
+
 from .accessory import Accessory
 from .block import Block
 from .text import Text
@@ -7,13 +9,13 @@ class Section(Block):
     def __init__(
         self,
         accessory: Accessory = None,
-        fields: list[Text] = None,
+        fields: List[Text] = None,
         text: Text = None,
     ):
         super().__init__(type="section")
 
         self._accessory = accessory
-        self._fields: list[Text] = fields or []
+        self._fields: List[Text] = fields or []
         self._text = text
 
     def serialize(self) -> dict:

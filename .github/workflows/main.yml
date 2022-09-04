@@ -24,10 +24,10 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
       - name: Install Poetry
-        uses: abatilo/actions-poetry@v2.0.0
+        uses: abatilo/actions-poetry@v2
 
       - name: Setup environment
-        run: poetry install
+        run: poetry install --no-root
 
       - name: Run tests with Coverage
         env:
@@ -64,10 +64,10 @@ jobs:
           python-version: 3.8
 
       - name: Install Poetry
-        uses: abatilo/actions-poetry@v2.0.0
+        uses: abatilo/actions-poetry@v2
 
       - name: Setup environment
-        run: poetry install
+        run: poetry install --no-root
 
       - name: Build package
         run: poetry build
