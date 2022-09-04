@@ -11,11 +11,16 @@ class Context(Block):
         self.elements: List[Element] = elements or []
 
     def serialize(self) -> dict:
-        return super().serialize() | {
-            "elements": list(
-                map(
-                    lambda element: element.serialize(),
-                    self.elements,
+        serialized = super().serialize()
+        serialized.update(
+            {
+                "elements": list(
+                    map(
+                        lambda element: element.serialize(),
+                        self.elements,
+                    )
                 )
-            )
-        }
+            }
+        )
+
+        return serialized

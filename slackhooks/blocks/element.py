@@ -18,9 +18,14 @@ class TextElement(Element):
         self.text = text
 
     def serialize(self) -> dict:
-        return super().serialize() | {
-            "text": self.text,
-        }
+        serialized = super().serialize()
+        serialized.update(
+            {
+                "text": self.text,
+            }
+        )
+
+        return serialized
 
 
 class PlainTextElement(TextElement):
@@ -32,9 +37,14 @@ class PlainTextElement(TextElement):
         self.emoji = emoji
 
     def serialize(self) -> dict:
-        return super().serialize() | {
-            "emoji": self.emoji,
-        }
+        serialized = super().serialize()
+        serialized.update(
+            {
+                "emoji": self.emoji,
+            }
+        )
+
+        return serialized
 
 
 class MarkdownTextElement(TextElement):
@@ -53,7 +63,12 @@ class ImageElement(Element):
         self.alt_text: str = alt_text
 
     def serialize(self) -> dict:
-        return super().serialize() | {
-            "image_url": self.image_url,
-            "alt_text": self.alt_text,
-        }
+        serialized = super().serialize()
+        serialized.update(
+            {
+                "image_url": self.image_url,
+                "alt_text": self.alt_text,
+            }
+        )
+
+        return serialized

@@ -20,9 +20,14 @@ class PlainText(Text):
         self.emoji = emoji
 
     def serialize(self) -> dict:
-        return super().serialize() | {
-            "emoji": self.emoji,
-        }
+        serialized = super().serialize()
+        serialized.update(
+            {
+                "emoji": self.emoji,
+            }
+        )
+
+        return serialized
 
 
 class MarkdownText(Text):
