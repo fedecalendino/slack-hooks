@@ -1,6 +1,6 @@
-from .base import Block
-from .text import Text, PlainText, MarkdownText
 from .accessory import Accessory
+from .block import Block
+from .text import Text
 
 
 class Section(Block):

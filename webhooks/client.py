@@ -1,6 +1,6 @@
 import requests
 
-from webhooks.blocks.base import Block
+from webhooks.blocks.block import Block
 
 
 class Message:
