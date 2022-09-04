@@ -33,5 +33,5 @@ jobs:
       - name: Notify via Slack
         with:
           slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
-          pypi_project_name: slack-webhooks
-        uses: fedecalendino/slack-release-notifier@v1.2.1
+          pypi_project_name: slack-hooks
+        uses: fedecalendino/slack-release-notifier@v1
