@@ -41,11 +41,7 @@ class ImageAccessory(Accessory):
         self.alt_text: str = alt_text
 
     def serialize(self) -> dict:
-        serialization = super().serialize()
-
-        serialization |= {
+        return super().serialize() | {
             "image_url": self.image_url,
             "alt_text": self.alt_text,
         }
-
-        return serialization
