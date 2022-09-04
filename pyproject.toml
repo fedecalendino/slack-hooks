@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "slack-webhooks"
+description = "Slack client for webhooks with Block Kit builder."
+documentation = "https://github.com/fedecalendino/slack-webhooks/blob/main/README.md"
+homepage = "https://github.com/fedecalendino/slack-webhooks"
+license = "MIT"
+readme = "README.md"
+version = "0.1.0"
+
+authors = [
+  "Fede Calendino <fede@calendino.com>",
+]
+classifiers = [
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+]
+keywords = [
+  "slack",
+  "webhooks",
+  "block kit",
+]
+packages = [
+  { include = "webhooks" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.28.1"
+
+[tool.poetry.dev-dependencies]
+black = "^22.6.0"
+coverage = "^6.4.1"
+ddt = "^1.5.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
