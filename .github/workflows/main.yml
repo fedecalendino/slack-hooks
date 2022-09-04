@@ -33,7 +33,7 @@ jobs:
         env:
           GENIUS_ACCESS_TOKEN: ${{ secrets.TOKEN_GENIUS }}
         run: |
-          poetry run coverage run --source webhooks -m unittest discover
+          poetry run coverage run --source slackhooks -m unittest discover
           poetry run coverage xml -o ./coverage.xml
 
       - name: Fix coverage xml path

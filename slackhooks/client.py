@@ -2,7 +2,7 @@ from typing import List
 
 import requests
 
-from webhooks.blocks.block import Block
+from slackhooks.blocks.block import Block
 
 
 class Message:

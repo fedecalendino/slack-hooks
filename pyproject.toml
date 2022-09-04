@@ -5,7 +5,7 @@ documentation = "https://github.com/fedecalendino/slack-hooks/blob/main/README.m
 homepage = "https://github.com/fedecalendino/slack-hooks"
 license = "MIT"
 readme = "README.md"
-version = "0.1.0"
+version = "0.2.0"
 
 authors = [
   "Fede Calendino <fede@calendino.com>",
@@ -23,7 +23,7 @@ keywords = [
   "block kit",
 ]
 packages = [
-  { include = "webhooks" },
+  { include = "slackhooks" },
 ]
 
 [tool.poetry.dependencies]
